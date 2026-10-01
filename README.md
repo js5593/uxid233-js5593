@@ -2,7 +2,7 @@
 ## About
 I am a sophmore in UXID. As of right now my interst leans towards the UX Design and Research side of the field; however, i'm excited to learn code as this is a totally fresh concept for me. I love to crochet and i'm currently working on creating my own business. I also have a Russian Blue kitty, a ginger Tabby kitty, and a pitbull.
 ## Topic
-My zodiac app will use different feline breeds depending on birth dates. 
+Specific zodiac signs will be assigned different feline breeds for my project. 
 ## AI use
 AI tools are encouraged as a work-aid to support learning and problem solving; however, blindly copying and pasting AI generated code should not be passed off as genuine work. **All uses of AI must be declared with assignment submissions.**(ChatGPT, Copilot,etc)
 
