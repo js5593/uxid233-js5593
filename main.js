@@ -1,8 +1,7 @@
-console.log('hello world')
 const zodiac_signs = ['Capricorn', 'Taurus', 'Gemini', 'Cancer',
   'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Aries', 'Aquarius', 'Pisces']
 
-  const zodiacprofiles = 
+  const zodiac_profiles = 
   {
     Capricorn: 
     {
@@ -102,5 +101,4 @@ const zodiac_signs = ['Capricorn', 'Taurus', 'Gemini', 'Cancer',
     }      
   };
 
-  console.log(zodiacprofiles)
-  
+  console.log(zodiac_profiles)
