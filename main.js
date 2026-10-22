@@ -5,159 +5,150 @@ const zodiac_signs = ['Capricorn', 'Taurus', 'Gemini', 'Cancer',
   [
     {
       zodiac_name: 'Capricorn',
-      start_month: 'December',
+      start_month: 12,
       start_day: 22,
-      end_month: 'January',
+      end_month: 1,
       end_day: 19, 
+      zodiac_sound: 'audio/capricorn.mp3',
+      zodiac_image: 'images/capricorn.png',
+      zodiac_text_description: 'jdhbfb',
     },
+
     {
       zodiac_name: 'Taurus',
-      start_month: 'April',
+      start_month: 4,
       start_day: 20,
-      end_month: 'May',
+      end_month: 5,
       end_day: 20,
+      zodiac_sound: 'audio/taurus.mp3',
+      zodiac_image: 'images/taurus.png',
+      zodiac_text_description:'',
     },
+
     {
       zodiac_name: 'Gemini',
-      start_month: 'May',
+      start_month: 5,
       start_day: 21,
-      end_month: 'June',
+      end_month: 6,
       end_day: 20,
+      zodiac_sound: 'audio/gemini.mp3',
+      zodiac_image: 'images/gemini.png',
+      zodiac_text_description:'',
     },
+
     {
       zodiac_name: 'Cancer',
-      start_month: 'June',
+      start_month: 6,
       start_day: 21,
-      end_month: 'July',
+      end_month: 7,
       end_day: 22,
+      zodiac_sound: 'audio/cancer.mp3',
+      zodiac_image: 'images/cancer.png',
+      zodiac_text_description:'',
     },
+    
     {
       zodiac_name: 'Leo',
-      start_month: 'July',
+      start_month: 7,
       start_day: 23,
-      end_month: 'August',
+      end_month: 8,
       end_day: 22,
+      zodiac_sound: 'audio/leo.mp3',
+      zodiac_image: 'images/leo.png',
+      zodiac_text_description:'',
     },
     {
       zodiac_name: 'Virgo',
-      start_month: 'August',
+      start_month: 8,
       start_day: 23,
-      end_month: 'September',
+      end_month: 9,
       end_day: 22,
+      zodiac_sound: 'audio/virgo.mp3',
+      zodiac_image: 'images/virgo.png',
+      zodiac_text_description:'',
     },
     {
       zodiac_name: 'Libra',
-      start_month: 'September',
+      start_month: 9,
       start_day: 23,
-      end_month: 'October',
+      end_month: 10,
       end_day: 22,
+      zodiac_sound: 'audio/.libra.mp3',
+      zodiac_image: 'images/libra.png',
+      zodiac_text_description:'',
     },
     {
       zodiac_name: 'Scorpio',
-      start_month: 'October',
+      start_month: 10,
       start_day: 23,
-      end_month: 'November',
+      end_month: 11,
       end_day: 21,
+      zodiac_sound: 'audio/scorpio.mp3',
+      zodiac_image: 'images/scoripio.png',
+      zodiac_text_description:'',
     },
     {
       zodiac_name: 'Sagittarius',
-      start_month: 'November',
+      start_month: 11,
       start_day: 22,
-      end_month: 'December',
+      end_month: 12,
       end_day: 21,
+      zodiac_sound: 'audio/sagittarius.mp3',
+      zodiac_image: 'images/saggitarius.png',
+      zodiac_text_description:'',
     },
     {
       zodiac_name: 'Aries',
-      start_month: 'March',
+      start_month: 3,
       start_day: 21,
-      end_month: 'April',
+      end_month: 4,
       end_day: 19,
+      zodiac_sound: 'audio/aries.mp3',
+      zodiac_image: 'images/aries.png',
+      zodiac_text_description:'',
     },
     {
       zodiac_name: 'Aquarius',
-      start_month: 'January',
+      start_month: 1,
       start_day: 20,
-      end_month: 'February',
+      end_month: 2,
       end_day: 18,
+      zodiac_sound: 'audio/aquarius.mp3',
+      zodiac_image: 'images/aquarius.png',
+      zodiac_text_description:'',
     },
     {
       zodiac_name: 'Pisces',
-      start_month: 'February',
+      start_month: 2,
       start_day: 19,
-      end_month: 'March',
+      end_month: 3,
       end_day: 20,
+      zodiac_sound:'auido/pisces.mp3',
+      zodiac_image: 'images/pisces.png',
+      zodiac_text_description:'',
     }      
   ];
 
-  function show_zodiac_image(zodiac_name)
-  {
-    const zodiac_image =
-    {
-      Capricorn: 'capricorn.png',
-      Taurus: 'taurus.png',
-      Gemini: 'gemini.png',
-      Cancer: 'cancer.png',
-      Leo: 'leo.png',
-      Virgo: 'virgo.png',
-      Libra: 'libra.png',
-      Scorpio: 'scorpio.png',
-      Sagittarius: 'sagittarius.png',
-      Aries: 'aries.png',
-      Aquarius: 'aquarius.png',
-      Pisces: 'pisces.png'
-    }
-      return zodiac_image[zodiac_name];
-  };
+  function show_zodiac_image(zodiac_name){}
 
-  function play_zodiac_sound(zodiac_name)
-  {
-    const zodiac_sound =
-    {
-      Capricorn: 'capricorn.mp3',
-      Taurus: 'taurus.mp3',
-      Gemini: 'gemini.mp3',
-      Cancer: 'cancer.mp3',
-      Leo: 'leo.mp3',
-      Virgo: 'virgo.mp3',
-      Libra: 'libra.mp3',
-      Scorpio: 'scorpio.mp3',
-      Sagittarius: 'sagittarius.mp3',
-      Aries: 'aries.mp3',
-      Aquarius: 'aquarius.mp3',
-      Pisces: 'pisces.mp3'
-    }
-      return zodiac_sound[zodiac_name];
+  function play_zodiac_sound(zodiac_name){}
 
-  }
-
-  function zodiac_text_description(zodiac_name)
-  {
-    const zodiac_description =
-    {
-      Capricorn: 'Capricorns are known for their discipline and practicality.',
-      Taurus: 'Taurus individuals are reliable and patient.',
-      Gemini: 'Geminis are adaptable and outgoing.',
-      Cancer: 'Cancers are intuitive and compassionate.',
-      Leo: 'Leos are confident and charismatic.',
-      Virgo: 'Virgos are analytical and detail-oriented.',
-      Libra: 'Libras are diplomatic and fair-minded.',
-      Scorpio: 'Scorpios are passionate and resourceful.',
-      Sagittarius: 'Sagittarians are adventurous and optimistic.',
-      Aries: 'Aries individuals are energetic and courageous.',
-      Aquarius: 'Aquarians are innovative and independent.',
-      Pisces: 'Pisces are empathetic and artistic.'
-  }
-  return zodiac_description[zodiac_name];
-  }
-
-  function get_zodiac_sign(month, day)
-  {
-    console.log(get_zodiac_sign(Febreuary, 12));
-  }
+  function zodiac_text_description(zodiac_name){}
   
-  function open_help()
+  function get_zodiac_sign(month, day){
+    for (const zodiac_profile of zodiac_profiles){
+      if (month===zodiac_profile.start_month && day>= zodiac_profile.start_day || month===zodiac_profile.end_month && day<=zodiac_profile.end_day){
+        return zodiac_profile.zodiac_name;
+      }
 
-  function reset_inputs()
+  }
+  return null;
+};  
+
+  
+ console.log(get_zodiac_sign(12, 20));
+ console.log(get_zodiac_sign(3,14))
+
 
 
 
