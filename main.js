@@ -135,19 +135,30 @@ const zodiac_signs = ['Capricorn', 'Taurus', 'Gemini', 'Cancer',
 
   function zodiac_text_description(zodiac_name){}
   
-  function get_zodiac_sign(month, day){
+
+function get_zodiac_sign(month, day){
     for (const zodiac_profile of zodiac_profiles){
       if (month===zodiac_profile.start_month && day>= zodiac_profile.start_day || month===zodiac_profile.end_month && day<=zodiac_profile.end_day){
         return zodiac_profile.zodiac_name;
       }
 
+
   }
   return null;
 };  
 
-  
- console.log(get_zodiac_sign(12, 20));
- console.log(get_zodiac_sign(3,14))
+
+
+
+console.log(item.zodiac_profiles.length);
+ console.log(get_zodiac_sign(11, 21));
+ console.log(get_zodiac_sign(3,44));
+
+
+
+
+
+
 
 
 
