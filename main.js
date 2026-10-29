@@ -9,6 +9,7 @@ const zodiac_signs = ['Capricorn', 'Taurus', 'Gemini', 'Cancer',
       start_day: 22,
       end_month: 1,
       end_day: 19, 
+      zodiac_catbreed: 'Mainecoon',
       zodiac_sound: 'audio/capricorn.mp3',
       zodiac_image: 'images/capricorn.png',
       zodiac_text_description: 'jdhbfb',
@@ -20,6 +21,7 @@ const zodiac_signs = ['Capricorn', 'Taurus', 'Gemini', 'Cancer',
       start_day: 20,
       end_month: 5,
       end_day: 20,
+      zodiac_catbreed: 'Persian',
       zodiac_sound: 'audio/taurus.mp3',
       zodiac_image: 'images/taurus.png',
       zodiac_text_description:'',
@@ -31,6 +33,7 @@ const zodiac_signs = ['Capricorn', 'Taurus', 'Gemini', 'Cancer',
       start_day: 21,
       end_month: 6,
       end_day: 20,
+      zodiac_catbreed: 'Persian',
       zodiac_sound: 'audio/gemini.mp3',
       zodiac_image: 'images/gemini.png',
       zodiac_text_description:'',
@@ -141,18 +144,26 @@ function get_zodiac_sign(month, day){
       if (month===zodiac_profile.start_month && day>= zodiac_profile.start_day || month===zodiac_profile.end_month && day<=zodiac_profile.end_day){
         return zodiac_profile.zodiac_name;
       }
-
-
   }
   return null;
 };  
 
+// zodiac_profiles.forEach(zodiac_profiles => {
+//   const zodicat = document.createElement('zodicat');
+//   zodicat.textContent = zodiac_profiles.zodiac_catbreed;
+//   const text = document.querySelector('#text');
+//   text.appendChild(zodicat);
+// });
 
+const output = document.querySelector('#output')
 
-
+for (const zodiac_catbreed of zodiac_profiles){
+ console.log(zodiac_catbreed);
+}
 console.log(item.zodiac_profiles.length);
  console.log(get_zodiac_sign(11, 21));
  console.log(get_zodiac_sign(3,44));
+
 
 
 
