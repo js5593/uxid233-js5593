@@ -183,9 +183,7 @@ function get_zodiac_catbreed(date_month, date_get){
 const output = document.querySelector('#output');
 const button = document.querySelector('#submit');
 const date_input = document.querySelector('#birthday');
-const selected_date = new Date(date_input.value);
-const date_get = selected_date.getDate();
-const month_get = selected_date.getMonth();
+
 
 function get_catbreed(month_get, date_get){
   for (const zodiac_catbreed of zodiac_catbreeds){
@@ -197,16 +195,15 @@ function get_catbreed(month_get, date_get){
     }}
 };
 
+
 button.addEventListener('click', function(){
   const selected_date = new Date(date_input.value);
-  const date_get = selected_date.getDate();
+  const date_get = selected_date.getDate() + 1;
   const month_get = selected_date.getMonth() + 1;
   const zodiac_sign = get_zodiac_sign(month_get, date_get);
   const zodiac_catbreed = get_zodiac_catbreed(month_get, date_get);
   output.textContent = `Your zodiac sign is ${zodiac_sign} and your cat breed is ${zodiac_catbreed}.`;
 });
-
-
 
  console.log(get_zodiac_sign(11, 21));
  console.log(get_zodiac_sign(3,44));
