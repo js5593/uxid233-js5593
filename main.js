@@ -80,7 +80,7 @@ const zodiac_signs = ['Capricorn', 'Taurus', 'Gemini', 'Cancer',
       end_month: 10,
       end_day: 22,
       zodiac_catbreed: 'Ragdoll',
-      zodiac_sound: 'audio/.libra.mp3',
+      zodiac_sound: 'audio/libra.mp3',
       zodiac_image: 'images/libra.jpg',
       zodiac_text_description:'Charming, social-butterfly peacemakers who adore beauty, balance, and harmony.',
     },
@@ -218,6 +218,17 @@ function get_image(month_get, date_get){
   return null;
 };  
 
+function get_sound(month_get, date_get){
+  for (const zodiac_profile of zodiac_profiles){
+    const start_m_d = (month_get === zodiac_profile.start_month && date_get >= zodiac_profile.start_day);
+    const end_m_d = (month_get === zodiac_profile.end_month && date_get <= zodiac_profile.end_day);
+      if (start_m_d || end_m_d){
+        return zodiac_profile.zodiac_sound;
+      }
+  }
+  return null;
+};  
+
 /*AI was used to help combine image display for both buttons and get audio to connect to the show results*/
 let current_audio = null;
 
@@ -226,17 +237,6 @@ function stop_all_sounds() {
     current_audio.pause();
     current_audio.currentTime = 0;
   }
-}
-
-
-
-function show_result(profile) {
-  if (!profile) return;
-  output.textContent = `Your zodiac sign is ${profile.zodiac_name} and your cat breed is ${profile.zodiac_catbreed}. Personality: ${profile.zodiac_text_description}`;
-  img_element.src = profile.zodiac_image;
-  img_element.alt = `${profile.zodiac_catbreed} cat`;
-  
-  play_zodiac_sound(profile.zodiac_sound);
 }
 
 const output = document.querySelector('#output');
@@ -254,14 +254,14 @@ button.addEventListener('click', function(){
   const zodiac_catbreed = get_catbreed(month_get, date_get);
   const zodiac_text_description = get_description(month_get, date_get);
   const zodiac_img = get_image(month_get, date_get);
+  const zodiac_sound = get_sound(month_get, date_get); 
   output.textContent = `Your zodiac sign is ${zodiac_sign} and your cat breed is ${zodiac_catbreed}. Personality: ${zodiac_text_description}`;
-
   img_element.src = zodiac_img;
   img_element.alt = `${zodiac_catbreed} cat`;
+if (zodiac_sound) {
+    play_zodiac_sound(zodiac_sound);
+  }
 });
-
-
-
 
 zodiac_profiles.forEach(profile => {
   const btn = document.createElement('button');
@@ -269,54 +269,48 @@ zodiac_profiles.forEach(profile => {
   
   btn.addEventListener('click', () => {
     show_result(profile);
+
   });
 
   buttons_container.appendChild(btn);
 });
 
+function show_result(profile) {
+  output.textContent = `Your zodiac sign is ${profile.zodiac_name} and your cat breed is ${profile.zodiac_catbreed}. 
+  Personality: ${profile.zodiac_text_description}`;
+  img_element.src = profile.zodiac_image;
+  img_element.alt = `${profile.zodiac_catbreed} cat`;
+  
+  play_zodiac_sound(profile.zodiac_sound);
+}
+
 const all_sounds = [];
 for (const zodiac_sign of zodiac_signs){ 
   const audio = new Audio(zodiac_profiles.zodiac_sound)
-
   zodiac_profiles.zodiac_sound = audio;
-  all_sounds.push(audio);
 }
-const audio_files = [];
-const play_button = document.querySelector('#play');
-const pause_button = document.querySelector('#pause');
 
 
+// function stop_all_sounds(){
+//   for (const audio of all_sounds)
+//   {
+//     audio.pause();
+//     audio.currentTime = 0;
+//   }
+// }; 
 
-const audio= new Audio('audio/aquarius.mp3');
-
-
-
-function stop_all_sounds(){
-  for (const audio of all_sounds)
-  {
-    audio.pause();
-    audio.currentTime = 0;
+function stop_all_sounds() {
+  if (current_audio) {
+    current_audio.pause();
+    current_audio.currentTime = 0;
   }
-}; 
+}
 
 function play_zodiac_sound(sound_path) {
   stop_all_sounds();
-  if (!sound_path) return;
   current_audio = new Audio(sound_path);
   current_audio.play();
 }
-
-play_button.addEventListener ('click', () => {
-  stop_all_sounds();
-  audio.play();
-});
-
-pause_button.addEventListener ('click', () => {
-  stop_all_sounds();
-  audio.play()
-});
-
-
 
 console.log(zodiac_signs);
  console.log(get_zodiac_sign(11, 21));
