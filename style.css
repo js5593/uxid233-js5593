@@ -1,0 +1,72 @@
+:root{
+--color-background: #ffffff;
+--color-foreground: #4e4e4e;
+--color-heading: #ffdec6;
+--button-color: #7d471e;
+--button-color-hover: #5b3511;
+--header-bgcolor: #54764b;
+--parent-color: #6a8956;
+}
+
+body{
+background-image: url(https://img.magnific.com/free-vector/hand-drawn-pattern-design-springtime-season_23-2151222838.jpg?semt=ais_hybrid&w=740&q=80);
+background-size:auto;
+background-position: center;
+ background-attachment: fixed;
+
+
+font-size: 1.5rem;
+}
+
+img{
+    display: block;
+	margin-inline: auto;
+    max-width: 60ch;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 50px;
+
+}
+
+.audio-button{
+display: flex;
+}
+
+#across{
+    text-align: center;
+}
+
+
+
+
+
+button {
+    border-radius: 1rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: .3rem;
+    background-color: peachpuff;
+}
+
+#button-container {
+    padding-left: 20px;
+    padding-right: 20px; 
+    margin-top: 3rem;
+  text-align: center;
+}
+
+
+#parent {
+	margin-inline: auto;
+    color: white;
+    background-color: var(--parent-color);
+    height: fit-content;
+    padding: 20px;
+    border-radius: 30px;
+    padding: 20px;
+    gap: 3rem;
+}
+
+

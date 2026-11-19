@@ -298,6 +298,7 @@ function stop_all_sounds(){
     audio.currentTime = 0;
   }
 }; 
+
 function play_zodiac_sound(sound_path) {
   stop_all_sounds();
   if (!sound_path) return;
@@ -312,7 +313,7 @@ play_button.addEventListener ('click', () => {
 
 pause_button.addEventListener ('click', () => {
   stop_all_sounds();
-  audio.play();
+  audio.play()
 });
 
 
